@@ -38,11 +38,20 @@ except:
     pass
 
 # Print List
-print("\nHere's your ToDo list:\n")
+if len(todos) == 0:
+    print("You have no ToDos :)")
+else:
+    print("\nHere's your ToDo list:\n")
+    for i in range(len(todos)):
+        print(f"{i + 1}. {todos[i]}", end = "")
 
 # Print Commands
-print("\n**********************************\n")
-print(f"View ToDos:")
-print(f"Add ToDo:")
-print(f"Remove or Complete ToDo:")
-print("\n**********************************\n")
+print("\n**********************************")
+print("COMMANDS")
+print("---")
+print(f"To View ToDos:\n{sys.argv[0]}")
+print("---")
+print(f"To Add a ToDo:\n{sys.argv[0]} add \"Something to do...\"")
+print("---")
+print(f"To Remove or Complete ToDo:\n{sys.argv[0]} remove [Number]")
+print("**********************************\n")
